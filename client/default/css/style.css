@@ -58,14 +58,7 @@ html, body {
   margin: 0 inherit;
 }
 
-/**
- * Back button
- */
-[data-rel="back"].ui-btn, [data-rel="back"].ui-btn {
-  background-image: linear-gradient( #0562AC, #123C5E);
-  background-image: -webkit-gradient(linear, left top, left bottom, from( #0562AC ), to( #123C5E ));
-  background-image: -webkit-linear-gradient( #0562AC, #123C5E )
-}
+
 
 /**
  * Custom icons

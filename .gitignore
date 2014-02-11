@@ -1,3 +1,4 @@
 cloud/node_modules/
 .fhclocal
 .DS_Store
+node_modules/

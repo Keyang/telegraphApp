@@ -492,9 +492,17 @@ cms.ui.jqueryMobile = (function(module) {
         var alias = category.alias;
         var children = category.children;
         var innerHtml = "";
+        var childArr=[];
         for (var key in children) {
-            var ele = children[key];
-            var eleName = ele.name;
+            childArr.push(children[key]);
+        }
+        childArr.sort(function(a,b){
+            return b.rank-a.rank;
+        });
+        for (var i=0;i<childArr.length;i++){
+            var ele=childArr[i];
+            var eleName=ele.name;
+            var key=ele.alias;
             innerHtml += "<li><a href='#' data-nav='"+key+"'>" + eleName + "</a></li>";
         }
         var html = '<div class="renderList" data-role="page" id="%{id}%">' +
@@ -572,14 +580,13 @@ cms.ui.jqueryMobile = (function(module) {
     function init() {
         if (inited == false) {
             inited = true;
-
-            $("[data-nav]").live("click", function() {
+            $(document).on("click", "[data-nav]", function() {
                 var pageId = $(this).data().nav;
                 if (cms.app.onNav) {
                     cms.app.onNav(pageId);
                 }
             });
-            $("[data-extraId]").live("click", function() {
+            $(document).on("click", "[data-extraId]", function() {
                 if (cms.app.onNav) {
                     var data = $(this).data();
                     var cat = data.cmscat;
@@ -654,7 +661,7 @@ cms.ui.jqueryMobile.renderExtra = (function(module) {
 
             var html = '<div data-role="page" id="'+uid+'">' +
                 '<div data-role="header" data-position="fixed">' +
-                '<h1>Costain News</h1>' +
+                '<h1>Content</h1>' +
                 '</div>' +
                 '<div data-role="content">' +
                 '<h3>'+title+'</h3>' +
