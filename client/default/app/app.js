@@ -5,7 +5,7 @@ var app=(function(module) {
   function init(){
     //init cms sdk
     cms.init({
-      alias: 'costainapp_1383735125091',
+      alias: 'telegraphapp_1383735125091',
       onNav:function(contentId){
         setTimeout(function(){
             app.view.changePage(contentId,{"changeHash":true,"addBackBtn":true});    
