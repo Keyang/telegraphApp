@@ -1,17 +1,8 @@
 {
-  "name": "fh-cms-cloud",
-  "version": "0.1.3",
-  "dependencies": {
-    "request": "2.27.0",
-    "async": "0.2.9"
-  },
-  "readme": "#FeedHenry Cloud Proxy for mobile cms",
-  "readmeFilename": "README.md",
-  "description": "",
-  "_id": "fh-cms-cloud@0.1.3",
-  "dist": {
-    "shasum": "8da42522abd7b378786dbcf89b72b7a33b03c2a4"
-  },
-  "_from": "https://github.com/Keyang/cmsFHCloud/tarball/master",
-  "_resolved": "https://github.com/Keyang/cmsFHCloud/tarball/master"
+  "name": "fh-app",
+  "version": "0.1.0",
+  "dependencies" : {
+    "fh-nodeapp" : "*",
+    "fh-cms-cloud":"https://github.com/Keyang/cmsFHCloud/tarball/master"
+  }
 }
