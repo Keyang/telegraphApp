@@ -11,7 +11,7 @@ app.view=(function(module){
         args.unshift("#"+id);
         setTimeout(function(){
             $.mobile.changePage.apply($.mobile,args);    
-        },1);
+        },10);
         
     }
 
