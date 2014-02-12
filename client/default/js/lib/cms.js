@@ -505,7 +505,7 @@ cms.ui.jqueryMobile = (function(module) {
             var key=ele.alias;
             innerHtml += "<li><a href='#' data-nav='"+key+"'>" + eleName + "</a></li>";
         }
-        var html = '<div class="renderList" data-role="page" id="%{id}%">' +
+        var html = '<div class="renderList" data-role="page" id="%{id}%" data-add-back-btn="true">' +
             '<div data-role="header" data-position="fixed"><h2>' + title + '</h2></div>' +
             '<div data-role="content">' +
             '<ul data-role="listview" data-inset="true">' +
@@ -558,7 +558,7 @@ cms.ui.jqueryMobile=(function(module){
                 }
             }
             var title=element.name;
-            html = '<div class="renderRSS" data-role="page" id="%{id}%" >' +
+            html = '<div class="renderRSS" data-role="page" id="%{id}%" data-add-back-btn="true">' +
             '<div data-role="header" data-position="fixed"><h2>' + title + '</h2></div>' +
             '<div data-role="content">' +
             '<ul data-role="listview" data-inset="true">' +

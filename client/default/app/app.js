@@ -1,7 +1,13 @@
 var app = (function(module) {
   module.init = init;
   module.myUI = {};
+  module.loadTemplate=loadView;
 
+  function loadView(viewName,cb){
+    $.get("/app/views/"+viewName+".html",function(body){
+      cb(null,body);
+    });
+  }
   function init() {
     //init cms sdk
     cms.init({
@@ -10,14 +16,12 @@ var app = (function(module) {
         setTimeout(function() {
           app.view.changePage(contentId, {
             "changeHash": true,
-            "addBackBtn": true
+            "addBackBtn":true
           });
-        }, 10);
+        }, 0);
 
       }
     });
-    $.mobile.toolbar.prototype.options.addBackBtn = true;
-    $.mobile.toolbar.prototype.options.backBtnText = "Back";
     $.mobile.loading("show", {
       text: "Fetching Data From Server...",
       textVisible: true,

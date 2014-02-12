@@ -1,0 +1,31 @@
+<div data-role="page" id="%{id}%" data-add-back-btn="true">
+  <div data-role="header" data-position="fixed" data-tap-toggle="false">
+    <h1>Story</h1>
+  </div>
+  <div data-role="content" class="oldPage">
+    <h3 class="content_title">{title}</h3>
+    <p class="content_abstract">{abstract}</p>
+    <div class="oneHalf gutter">
+            <div class="story">
+    <div id="storyEmbSlide">
+      <div class="slideshow ssMain">
+        <div class="nextPrevLayer">
+              <div class="ssImg" style="display: block;">
+                  <img src="{img_url}" style="width:100%" alt="{img_alt}" itemprop="image">
+                  <div class="artImageExtras">
+                  
+                    <div class="ingCaptionCredit">
+                      <span class="caption">{caption}</span>&nbsp;<span class="credit">{credit}</span></div>           
+                  </div>
+                </div>
+              </div>      
+          </div>
+    </div>
+
+    <!-- remove the whitespace added by escenic before end of </a> tag -->
+  <div id="mainBodyArea" itemprop="articleBody">
+{articleBody}
+</div>
+       {related}
+</div></div></div>
+  </div>

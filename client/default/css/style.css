@@ -41,7 +41,7 @@ html, body {
 /**
  * Header
  */
-.ui-header {
+/*.ui-header {
   background: #0167b9;
   background-repeat: repeat-x;
   background-size: 100%;
@@ -78,7 +78,7 @@ html, body {
 .ui-icon-news {
   background-image: url("../img/news.png");
   background-size: 18px;
-}
+}*/
 
 .home-icon {
   margin:0 auto;
