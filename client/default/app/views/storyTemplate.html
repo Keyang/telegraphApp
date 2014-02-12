@@ -27,47 +27,23 @@
                     {articleBody}
                 </div>
 
-                <div id="disqus_thread" class="disqus-wrap disqus-active"></div>
-                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+                <div id="disqus_thread"></div>
+
 
                 <script>
-                    jQuery(document).ready(function () {
-                        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                        var disqus_shortname = 'fhtelegraphpoc'; // Required - Replace example with your forum shortname
-                        var disqus_identifier = jQuery('.ui-page-active .page_title').html().replace(/ /g,'-'); // Change selector to match your project
-                        var disqus_title = jQuery('.ui-page-active .page_title').html(); // Change selector to match your project
-                        var disqus_url = document.location.href;
-                        var disqus_developer = '1';
-                        if( typeof( DISQUS ) == 'undefined' ){
-                            /* * * DON'T EDIT BELOW THIS LINE * * */
-                            (function() {
-                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                            })();
-                        }
-                    });
+                    window.disqus_no_style = true;
 
-                    jQuery( 'body' ).on( "pagebeforeload", function( event ) {
-                        jQuery('#disqus_thread').empty().removeClass('disqus-active').addClass('disqus-inactive').removeAttr('id');
-                    });
-                    jQuery( 'body' ).on( "pagechange", function( event, ui ) {
-                        if ( jQuery('.disqus-wrap').length == 1 ) {
-                            jQuery('.disqus-inactive').addClass('disqus-active').removeClass('disqus-inactive').attr('id','disqus_thread');
-                        }
-                        if( typeof( DISQUS ) !== 'undefined' ){
-                            DISQUS.reset({
-                                reload: true,
-                                config: function () {
-                                    this.page.identifier = jQuery('.ui-page-active .page_title').html().replace(/ /g,'-');
-                                    this.page.url = document.location.href;
-                                    this.page.title = jQuery('.ui-page-active .page_title').html();
-                                }
-                            });
-                        }
-                    });
+                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                    var disqus_shortname = 'fhtelegraphpoc'; // Required - Replace example with your forum shortname
+                    var disqus_identifier = 'qwqweqwnj'; // Change selector to match your project
+                    var disqus_title = 'Sample Article'; // Change selector to match your project
+                    var disqus_url = 'http://telegraphgroup.kcms.keyangxiang.com/cms/articles/choosecontent';
+
+                    $.getScript('http://fhtelegraphpoc.disqus.com/embed.js');
+
                 </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
                 {related}
