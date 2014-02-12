@@ -4,7 +4,7 @@ var app = (function(module) {
   module.loadTemplate=loadView;
 
   function loadView(viewName,cb){
-    $.get("/app/views/"+viewName+".html",function(body){
+    $.get("app/views/"+viewName+".html",function(body){
       cb(null,body);
     });
   }
