@@ -1,31 +1,48 @@
 <div data-role="page" id="%{id}%" data-add-back-btn="true">
-  <div data-role="header" data-position="fixed" data-tap-toggle="false">
-    <h1>Story</h1>
-  </div>
-  <div data-role="content" class="oldPage">
-    <h3 class="content_title">{title}</h3>
-    <p class="content_abstract">{abstract}</p>
-    <div class="oneHalf gutter">
-            <div class="story">
-    <div id="storyEmbSlide">
-      <div class="slideshow ssMain">
-        <div class="nextPrevLayer">
-              <div class="ssImg" style="display: block;">
-                  <img src="{img_url}" style="width:100%" alt="{img_alt}" itemprop="image">
-                  <div class="artImageExtras">
-                  
-                    <div class="ingCaptionCredit">
-                      <span class="caption">{caption}</span>&nbsp;<span class="credit">{credit}</span></div>           
-                  </div>
-                </div>
-              </div>      
-          </div>
+    <div data-role="header" data-position="fixed" data-tap-toggle="false">
+        <h1>Story</h1>
     </div>
+    <div data-role="content" class="oldPage">
+        <h3 class="content_title">{title}</h3>
+        <p class="content_abstract">{abstract}</p>
+        <div class="oneHalf gutter">
+            <div class="story">
+                <div id="storyEmbSlide">
+                    <div class="slideshow ssMain">
+                        <div class="nextPrevLayer">
+                            <div class="ssImg" style="display: block;">
+                                <img src="{img_url}" style="width:100%" alt="{img_alt}" itemprop="image">
+                                <div class="artImageExtras">
 
-    <!-- remove the whitespace added by escenic before end of </a> tag -->
-  <div id="mainBodyArea" itemprop="articleBody">
-{articleBody}
+                                    <div class="ingCaptionCredit">
+                                        <span class="caption">{caption}</span>&nbsp;<span class="credit">{credit}</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- remove the whitespace added by escenic before end of </a> tag -->
+                <div id="mainBodyArea" itemprop="articleBody">
+                    {articleBody}
+                </div>
+
+                <div id="disqus_thread"></div>
+                <script>
+                    // window.disqus_no_style = true;
+
+                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                    var disqus_shortname = 'fhtelegraphpoc'; // Required - Replace example with your forum shortname
+                    var disqus_identifier = 'qwqweqwnj'; // Change selector to match your project
+                    var disqus_title = 'Sample Article'; // Change selector to match your project
+                    var disqus_url = 'http://telegraphgroup.kcms.keyangxiang.com/cms/articles/choosecontent';
+
+                    $.getScript('https://fhtelegraphpoc.disqus.com/embed.js');
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+                {related}
+            </div></div></div>
 </div>
-       {related}
-</div></div></div>
-  </div>
